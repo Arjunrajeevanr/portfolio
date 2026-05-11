@@ -1,131 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <style>
-  .cf-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    min-height: 480px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-    overflow: hidden;
-    margin: 2rem 0;
-  }
-  .cf-left {
-    background: #1a1a2e;
-    padding: 2.5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-  }
-  .cf-left::before {
-    content: '';
-    position: absolute;
-    width: 220px; height: 220px;
-    border-radius: 50%;
-    background: rgba(127,119,221,0.18);
-    top: -60px; left: -60px;
-  }
-  .cf-left::after {
-    content: '';
-    position: absolute;
-    width: 160px; height: 160px;
-    border-radius: 50%;
-    background: rgba(29,158,117,0.12);
-    bottom: 40px; right: -40px;
-  }
-  .cf-left-content { position: relative; z-index: 1; }
-  .cf-eyebrow {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    color: #7f77dd; margin: 0 0 1rem;
-  }
-  .cf-heading {
-    font-size: 26px; font-weight: 400;
-    color: #f0eeff; line-height: 1.3; margin: 0 0 1.25rem;
-  }
-  .cf-desc {
-    font-size: 13.5px; font-weight: 300;
-    color: rgba(240,238,255,0.55); line-height: 1.7; margin: 0;
-  }
-  .cf-contact-info { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 10px; }
-  .cf-info-row {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 12.5px; color: rgba(240,238,255,0.5);
-  }
-  .cf-info-row i { font-size: 15px; color: #7f77dd; }
-  .cf-right {
-    padding: 2.5rem 2.25rem;
-    display: flex; flex-direction: column; gap: 1.25rem;
-    background: #0f0f1a;
-  }
-  .cf-field { display: flex; flex-direction: column; gap: 6px; }
-  .cf-label {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(240,238,255,0.45);
-  }
-  .cf-input {
-    font-size: 14px; font-weight: 300;
-    color: #f0eeff;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(127,119,221,0.2);
-    border-radius: 8px;
-    padding: 11px 14px;
-    outline: none;
-    transition: border-color 0.2s, background 0.2s;
-    width: 100%; box-sizing: border-box;
-  }
-  .cf-input::placeholder { color: rgba(240,238,255,0.25); }
-  .cf-input:focus {
-    border-color: #7f77dd;
-    background: rgba(127,119,221,0.08);
-    box-shadow: 0 0 0 3px rgba(127,119,221,0.12);
-  }
-  .cf-textarea { resize: none; height: 130px; line-height: 1.6; }
-  .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .cf-btn {
-    margin-top: 0.25rem; padding: 13px 28px;
-    background: #3c3489; color: #f0eeff;
-    border: none; border-radius: 8px;
-    font-size: 13.5px; font-weight: 500; letter-spacing: 0.04em;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    transition: background 0.2s, transform 0.1s;
-    width: 100%;
-  }
-  .cf-btn:hover { background: #534ab7; }
-  .cf-btn:active { transform: scale(0.98); }
-  .cf-success {
-    display: none; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 12px; text-align: center; padding: 2rem; height: 100%;
-  }
-  .cf-success-icon { font-size: 48px; color: #1d9e75; }
-  .cf-success-title { font-size: 20px; color: #f0eeff; margin: 0; }
-  .cf-success-sub { font-size: 13.5px; color: rgba(240,238,255,0.5); margin: 0; }
-  @media (max-width: 768px) {
-    .cf-wrap { grid-template-columns: 1fr; }
-    .cf-row { grid-template-columns: 1fr; }
-  }
-</style>
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Arjun.R </title>
+  <title>Arjun.R</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="image/WhatsApp Image 2025-02-20 at 18.20.24_779d337e.jpg" rel="icon">
+  <link href="image/profile-photo.jpg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -137,32 +27,152 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: Arjun.R
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Contact Form Styles -->
+  <style>
+    .cf-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      min-height: 480px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+    .cf-left {
+      background: #1a1a2e;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .cf-left::before {
+      content: '';
+      position: absolute;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(127,119,221,0.18);
+      top: -60px; left: -60px;
+    }
+    .cf-left::after {
+      content: '';
+      position: absolute;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(29,158,117,0.12);
+      bottom: 40px; right: -40px;
+    }
+    .cf-left-content { position: relative; z-index: 1; }
+    .cf-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: #7f77dd; margin: 0 0 1rem;
+    }
+    .cf-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 400;
+      color: #f0eeff; line-height: 1.3; margin: 0 0 1.25rem;
+    }
+    .cf-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px; font-weight: 300;
+      color: rgba(240,238,255,0.55); line-height: 1.7; margin: 0;
+    }
+    .cf-contact-info {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .cf-info-row {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12.5px; color: rgba(240,238,255,0.5);
+    }
+    .cf-info-row i { font-size: 15px; color: #7f77dd; }
+    .cf-right {
+      padding: 2.5rem 2.25rem;
+      display: flex; flex-direction: column; gap: 1.25rem;
+      background: #0f0f1a;
+    }
+    .cf-field { display: flex; flex-direction: column; gap: 6px; }
+    .cf-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(240,238,255,0.45);
+    }
+    .cf-input {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 300;
+      color: #f0eeff;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(127,119,221,0.2);
+      border-radius: 8px;
+      padding: 11px 14px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      width: 100%; box-sizing: border-box;
+    }
+    .cf-input::placeholder { color: rgba(240,238,255,0.25); }
+    .cf-input:focus {
+      border-color: #7f77dd;
+      background: rgba(127,119,221,0.08);
+      box-shadow: 0 0 0 3px rgba(127,119,221,0.12);
+    }
+    .cf-textarea { resize: none; height: 130px; line-height: 1.6; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cf-btn {
+      margin-top: 0.25rem; padding: 13px 28px;
+      background: #3c3489; color: #f0eeff;
+      border: none; border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px; font-weight: 500; letter-spacing: 0.04em;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: background 0.2s, transform 0.1s;
+      width: 100%;
+    }
+    .cf-btn:hover { background: #534ab7; }
+    .cf-btn:active { transform: scale(0.98); }
+    .cf-success {
+      display: none; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 12px; text-align: center; padding: 2rem; height: 100%;
+    }
+    .cf-success-icon { font-size: 48px; color: #1d9e75; }
+    .cf-success-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; color: #f0eeff; margin: 0;
+    }
+    .cf-success-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px; color: rgba(240,238,255,0.5); margin: 0;
+    }
+    @media (max-width: 768px) {
+      .cf-wrap { grid-template-columns: 1fr; }
+      .cf-row  { grid-template-columns: 1fr; }
+      .cf-left { min-height: auto; }
+    }
+  </style>
+
 </head>
 
 <body class="index-page">
 
+  <!-- HEADER -->
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="image/WhatsApp Image 2025-02-20 at 18.20.24_779d337e.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="image/profile-photo.jpg" alt="Arjun R" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename text-warning  ">Arjun.R</h1>
+      <h1 class="sitename text-warning">Arjun.R</h1>
     </a>
 
     <div class="social-links text-center">
-      
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
       <a href="https://www.linkedin.com/in/arjun-r-939718243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
@@ -170,230 +180,166 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i> Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Skills</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> projects</a></li>
-       
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Projects</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section id="hero" class="hero section dark-background">
-
-     <img src="image/WhatsApp Image 2025-02-20 at 20.08.34_f450d096.jpg" alt="">
-
-      <div class="container " data-aos="fade-up" data-aos-delay="100">
+      <img src="image/about-photo.jpg" alt="Hero background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Arjun.R</h2>
-        <p>I'm <span class="typed text-warning" data-typed-items="software engineer, Web Developer,  Photographer ">Web Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p>I'm <span class="typed text-warning" data-typed-items="Software Engineer, Web Developer, Photographer">Web Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
+    </section>
 
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
+    <!-- ABOUT -->
     <section id="about" class="about section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
         <p>I'm Arjun, a passionate and dedicated aspiring software engineer with a strong interest in coding and technology. I enjoy learning and working with programming languages, continuously striving to improve my skills and expand my knowledge. My focus is on developing innovative solutions and creating efficient, user-friendly applications. With a structured and disciplined approach to learning, I aim to grow both personally and professionally in the ever-evolving world of technology.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="image/WhatsApp Image 2025-02-20 at 18.20.24_779d337e.jpg" class="img-fluid" alt="">
+            <img src="image/about-photo.jpg" class="img-fluid" alt="Arjun R">
           </div>
           <div class="col-lg-8 content">
-            
-            <p class="fst-italic py-3">
-              
-            </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>19-01-2002</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>mail:</strong> <span>arjunrajeevanr@gamil.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Mail:</strong> <span>arjunrajeevanr@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>9895295136</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kollam,Karunagappally</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kollam, Karunagappally</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="display-age"></span></li>
-                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li> -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Graguate in  B.S.C. Phyisics </span></li>
-                  
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Graduate in B.S.C. Physics</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
             </div>
-            <p class="py-3">
-              
-            </p>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /About Section -->
-
-    </section><!-- /Stats Section -->
-
-    <!-- Skills Section -->
+    <!-- SKILLS -->
     <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
+        <p>Focused on building clean, responsive web experiences with modern tools.</p>
+      </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row skills-content skills-animation">
-
           <div class="col-lg-6">
-
             <div class="progress">
               <span class="skill"><span>HTML</span> <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
+            </div>
             <div class="progress">
               <span class="skill"><span>CSS</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
+            </div>
             <div class="progress">
               <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
+            </div>
           </div>
-
           <div class="col-lg-6">
-
             <div class="progress">
-              <span class="skill"><span>bootstrap</span> <i class="val">80%</i></span>
+              <span class="skill"><span>Bootstrap</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
-            
-            </div><!-- End Skills Item -->
-
+            </div>
             <div class="progress">
               <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-            </div><!-- End Skills Item -->
-
+            </div>
           </div>
-
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
+    <!-- RESUME -->
     <section id="resume" class="resume section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <p></p>
-      </div><!-- End Section Title -->
-
+      </div>
       <div class="container">
-
         <div class="row">
-
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Personal Detailes</h3>
-
+            <h3 class="resume-title">Personal Details</h3>
             <div class="resume-item pb-0">
               <h4>Arjun.R</h4>
-                <ul>
-                <li>Kollam,Karunagappally-KERALA-690573</li>
+              <ul>
+                <li>Kollam, Karunagappally - KERALA - 690573</li>
                 <li>9895295136</li>
-                <li>arjunrajeevanr@gamil.com</li>
+                <li>arjunrajeevanr@gmail.com</li>
               </ul>
-            </div><!-- Edn Resume Item -->
-
+            </div>
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>Degree in B.S.C. PHYSICS</h4>
+              <h4>Degree in B.S.C. Physics</h4>
               <h5>2019 - 2022</h5>
-              <p><em>Mahatma Gandhi University ,Kottayam</em></p>
-             
+              <p><em>Mahatma Gandhi University, Kottayam</em></p>
             </div>
-            <!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Web Developer</h4>
-              <h5>2025- Present</h5>
-              <p><em> Create  wbsite</em></p>
-              <ul>
-                <li>Html &  CSS</li>
-                <li>HTML,CSS & Bootstrap</li>
-              </ul>
-            </div> 
-             <!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Languages</h3>
             <div class="resume-item">
               <ul>
-                 <li>English</li>
+                <li>English</li>
                 <li>German</li>
                 <li>Malayalam</li>
                 <li>Tamil</li>
               </ul>
-              </div>        
-    <!-- Edn Resume Item -->
-
+            </div>
           </div>
-
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Web Developer</h4>
+              <h5>2025 - Present</h5>
+              <p><em>Create websites</em></p>
+              <ul>
+                <li>HTML &amp; CSS</li>
+                <li>HTML, CSS &amp; Bootstrap</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
+    <!-- PORTFOLIO / SKILLS LIST -->
     <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
-        <p>Time Management,Persistencs and Resilence</p>
+        <p>Time Management, Persistence and Resilience</p>
         <br>
-        <h6>Technical Skill</h6>
+        <h6>Technical Skills</h6>
         <ul>
-          <li>HTML & CSS</li>
+          <li>HTML &amp; CSS</li>
           <li>Coding</li>
           <li>Web Development</li>
         </ul>
@@ -405,195 +351,80 @@
           <li>Tamil</li>
         </ul>
       </div>
-    <!-- Services Section -->
-    <section id="services" class="services section">
+    </section>
 
-      <!-- Section Title -->
+    <!-- PROJECTS -->
+    <section id="services" class="services section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Projects</h2>
-        <img src="https://www.next.co.uk/static-content/icons/header/next/v2/vision/new-next-black-logo.svg" alt="">
-        <img src="https://th.bing.com/th/id/OIP.z3JWNGeUG9UnBuErrriUqwHaE8?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
-        <img src="http://papergrid.in/cdn/shop/files/logo_colourful_b7f0eb4d-9e3e-49b3-9455-3f6b62110e94.png?v=1593152694" alt="">
-        
-      </div><!-- End Section Title -->
+        <img src="https://www.next.co.uk/static-content/icons/header/next/v2/vision/new-next-black-logo.svg" alt="Next">
+        <img src="https://th.bing.com/th/id/OIP.z3JWNGeUG9UnBuErrriUqwHaE8?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Project 2">
+        <img src="http://papergrid.in/cdn/shop/files/logo_colourful_b7f0eb4d-9e3e-49b3-9455-3f6b62110e94.png?v=1593152694" alt="Papergrid">
+      </div>
+    </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT -->
     <section id="contact" class="contact section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Feel Free to Reach out to me through any of the following channels.I'm always open to discussing  new opportunities,collaborations,or just connecting. </p>
-      </div><!-- End Section Title -->
+        <p>Feel free to reach out to me. I'm always open to discussing new opportunities, collaborations, or just connecting.</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="cf-wrap">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-1"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Vadakkayyathu,Pandarathuruthu,Cheriyazheekal,P.O.<br>Karunagappally-Kollam,Kerala-690573</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call me</h3>
-                  <p>9895295136</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <!-- <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Send Mail</h3>
-                  <p>arjunrajeevar@gamil.com</p>
-                </div>
-              </div><!-- End Info Item -->
-<!-- 
-              <iframe src=""></iframe>
-              </div>  --> -->
-
-          <!-- <div class="col-lg-7">
-            <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form-style" onsubmit="return validation()">
-              <h1 class="mb-4">Contact me</h1>
-              <input type="hidden" name="access_key" value="28019574-7234-44c8-99f9-e0bad6f68fd7">
-              
-              <div class="form-group mb-3">
-                <label for="Username">Username</label>
-                <input type="text" name="Username" id="Username" class="form-control">
-              </div>
-
-              <div class="form-group mb-3">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control">
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group mb-3">
-                  <label for="password">Password</label>
-                  <input type="password" name="password" id="password" class="form-control">
-                </div>
-                <div class="col-md-6 form-group mb-3">
-                  <label for="cpassword">Confirm Password</label>
-                  <input type="password" name="cpassword" id="cpassword" class="form-control">
-                </div>
-              </div>
-
-              <div class="form-group mb-3">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" class="form-control"></textarea>
-              </div>
-
-              <div class="text-center">
-                <button type="submit" class="btn-submit-custom">Send Message</button>
-              </div>
-            </form>
-          </div>
-
-       
-           -->
-            <div class="cf-wrap">
-
-  <!-- Left info panel -->
-  <div class="cf-left">
-    <div class="cf-left-content">
-      <p class="cf-eyebrow">Get in touch</p>
-      <h2 class="cf-heading">Let's work<br>together.</h2>
-      <p class="cf-desc">Have a project in mind or just want to say hello? Fill in the form and I'll get back to you as soon as possible.</p>
-    </div>
-    <div class="cf-contact-info">
-      <div class="cf-info-row"><i class="bi bi-envelope"></i> arjunrajeevanr@gmail.com</div>
-      <div class="cf-info-row"><i class="bi bi-telephone"></i> 9895295136</div>
-      <div class="cf-info-row"><i class="bi bi-geo-alt"></i> Kollam, Kerala</div>
-      <div class="cf-info-row"><i class="bi bi-globe"></i> Available for freelance &amp; collab</div>
-    </div>
-  </div>
-
-  <!-- Right form panel -->
-     <div class="cf-right" id="cf-form-area">
-         <div class="cf-row">
-      <div class="cf-field">
-            <label class="cf-label" for="cf-name">Name</label>
-        <input class="cf-input" id="cf-name" type="text" placeholder="Your name" autocomplete="name">
-      </div>
-      <div class="cf-field">
-        <label class="cf-label" for="cf-email">Email</label>
-        <input class="cf-input" id="cf-email" type="email" placeholder="you@email.com" autocomplete="email">
-      </div>
-    </div>
-    <div class="cf-field">
-      <label class="cf-label" for="cf-msg">Message</label>
-      <textarea class="cf-input cf-textarea" id="cf-msg" placeholder="Tell me about your project or idea…"></textarea>
-    </div>
-    <button class="cf-btn" id="cf-send" onclick="handleContactSend()">
-      <i class="bi bi-send"></i> Connect with me
-    </button>
-  </div>
-
-</div>
-          <div class=" col-lg-6 col-2 col-sm-4 col-md-2 col-xs-12 col-xl-2">
-           <form action="https://api.web3forms.com/submit" method="POST"  class="forms" data-aos="fade-up" data-aos-delay="200" onsubmit="return validation()">
-              <div class="row gy-4">
-                   <h1>Contact me</h1>
-                <div class="col-md-6">
-                
-        <input type="hidden" name="access_key" value="28019574-7234-44c8-99f9-e0bad6f68fd7">
-        <label for="Username">Username</label>
-        <input type="text" name="Username" id="Username"><br>
-        
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email"><br>
-        
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password"><br>
-        
-        <label for="cpassword">Confirm Password</label>
-        <input type="password" name="cpassword" id="cpassword"><br>
-        
-        <label for="message">Message</label>
-        <textarea name="message" id="message"></textarea><br>
-        
-        <input type="submit" class="bg-warning text-center" value="Send Message">
-    </form>
-              </div>
-            </form>
-          </div>
-        <!-- End Contact Form -->
-            
-
-        </div>
-
-      </div>
-         </div> 
+          <!-- Left info panel -->
+          <div class="cf-left">
+            <div class="cf-left-content">
+              <p class="cf-eyebrow">Get in touch</p>
+              <h2 class="cf-heading">Let's work<br>together.</h2>
+              <p class="cf-desc">Have a project in mind or just want to say hello? Fill in the form and I'll get back to you as soon as possible.</p>
+            </div>
+            <div class="cf-contact-info">
+              <div class="cf-info-row"><i class="bi bi-envelope"></i> zoromonkey77700@gmail.com</div>
+              <div class="cf-info-row"><i class="bi bi-telephone"></i> 9895295136</div>
+              <div class="cf-info-row"><i class="bi bi-geo-alt"></i> Kollam, Kerala</div>
+              <div class="cf-info-row"><i class="bi bi-globe"></i> Available for freelance &amp; collab</div>
             </div>
           </div>
 
-    </section><!-- /Contact Section -->
+          <!-- Right form panel -->
+          <div class="cf-right" id="cf-form-area">
+            <div class="cf-row">
+              <div class="cf-field">
+                <label class="cf-label" for="cf-name">Name</label>
+                <input class="cf-input" id="cf-name" type="text" placeholder="Your name" autocomplete="name">
+              </div>
+              <div class="cf-field">
+                <label class="cf-label" for="cf-email">Email</label>
+                <input class="cf-input" id="cf-email" type="email" placeholder="you@email.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="cf-field">
+              <label class="cf-label" for="cf-msg">Message</label>
+              <textarea class="cf-input cf-textarea" id="cf-msg" placeholder="Tell me about your project or idea…"></textarea>
+            </div>
+            <button class="cf-btn" id="cf-send" onclick="handleContactSend()">
+              <i class="bi bi-send"></i> Connect with me
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container">
-      <div class="copyright text-center ">
+      <div class="copyright text-center">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Arjun.R</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -613,142 +444,54 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script> #preloader { display: none !important; } </script>
-      <script>
-  // Age automatic change 
-  function calculateAge() {
-    const dob = new Date("2002-01-19");
-    const today = new Date();
-    let age = today.getFullYear() - dob.getFullYear();
-    const monthDiff = today.getMonth() - dob.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
-      age--;
+
+  <script>
+    /* Auto-calculate age */
+    function calculateAge() {
+      var dob   = new Date("2002-01-19");
+      var today = new Date();
+      var age   = today.getFullYear() - dob.getFullYear();
+      var m     = today.getMonth() - dob.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) age--;
+      document.getElementById("display-age").innerText = age;
     }
-    document.getElementById("display-age").innerText = age;
-  }
-  calculateAge(); 
-        
-//form Validation
-  function handleContactSend() {
-    var name  = document.getElementById('cf-name').value.trim();
-    var email = document.getElementById('cf-email').value.trim();
-    var msg   = document.getElementById('cf-msg').value.trim();
-    var btn   = document.getElementById('cf-send');
+    calculateAge();
 
-    if (!name || !email || !msg) {
-      btn.innerHTML = '<i class="bi bi-exclamation-circle"></i> Please fill all fields';
-      btn.style.background = '#a32d2d';
-      setTimeout(function() {
-        btn.innerHTML = '<i class="bi bi-send"></i> Connect with me';
-        btn.style.background = '';
-      }, 2500);
-      return;
+    /* Contact form */
+    function handleContactSend() {
+      var name  = document.getElementById('cf-name').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+      var msg   = document.getElementById('cf-msg').value.trim();
+      var btn   = document.getElementById('cf-send');
+
+      if (!name || !email || !msg) {
+        btn.innerHTML = '<i class="bi bi-exclamation-circle"></i> Please fill all fields';
+        btn.style.background = '#a32d2d';
+        setTimeout(function () {
+          btn.innerHTML = '<i class="bi bi-send"></i> Connect with me';
+          btn.style.background = '';
+        }, 2500);
+        return;
+      }
+
+      var subject = encodeURIComponent('Portfolio Contact from ' + name);
+      var body    = encodeURIComponent(
+        'Name: '     + name  + '\n' +
+        'Email: '    + email + '\n\n' +
+        'Message:\n' + msg
+      );
+
+      window.location.href = 'mailto:zoromonkey77700@gmail.com?subject=' + subject + '&body=' + body;
+
+      document.getElementById('cf-form-area').innerHTML =
+        '<div class="cf-success" style="display:flex;">' +
+          '<i class="bi bi-check-circle cf-success-icon"></i>' +
+          '<p class="cf-success-title">Message sent!</p>' +
+          '<p class="cf-success-sub">Thanks for reaching out, ' + name + '.<br>I\'ll get back to you shortly.</p>' +
+        '</div>';
     }
+  </script>
 
-    var subject = encodeURIComponent('Portfolio Contact from ' + name);
-    var body    = encodeURIComponent(
-      'Name: '    + name  + '\n' +
-      'Email: '   + email + '\n\n' +
-      'Message:\n' + msg
-    );
-
-    window.location.href = 'mailto:zoromonkey77700@gmail.com?subject=' + subject + '&body=' + body;
-
-    var area = document.getElementById('cf-form-area');
-    area.innerHTML =
-      '<div class="cf-success" style="display:flex;">' +
-        '<i class="bi bi-check-circle cf-success-icon"></i>' +
-        '<p class="cf-success-title">Message sent!</p>' +
-        '<p class="cf-success-sub">Thanks for reaching out, ' + name + '.<br>I\'ll get back to you shortly.</p>' +
-      '</div>';
-  }
-
-  // Form Validation
-  // function validation() {
-  //   var username = document.getElementById("Username");
-  //   var email = document.getElementById("email");
-  //   var password = document.getElementById("password");
-  //   var cpassword = document.getElementById("cpassword");
-  //   var message = document.getElementById("message");
-
-  //   if (username.value.trim() == "") {
-  //     alert("Please enter a Username");
-  //     username.focus();
-  //     return false;
-  //   }
-  //   if (email.value.trim() == "") {
-  //     alert("Email is required");
-  //     email.focus();
-  //     return false;
-  //   }
-  //   if (password.value.length < 6) {
-  //     alert("Password must be at least 6 characters");
-  //     password.focus();
-  //     return false;
-  //   }
-  //   if (cpassword.value != password.value) {
-  //     alert("Passwords do not match!");
-  //     cpassword.focus();
-  //     return false;
-  //   }
-  //   if (message.value.trim() == "") {
-  //     alert("Message cannot be empty");
-  //     message.focus();
-  //     return false;
-  //   }
-  //   return true;
-  // }
-</script>
-<!-- <script>
-  function validation() {
-      var username = document.getElementById("Username");
-      var email = document.getElementById("email");
-      var password = document.getElementById("password");
-      var cpassword = document.getElementById("cpassword");
-      var message = document.getElementById("message");
-
-      if (username.value == "") {
-          alert("Must have a Username");
-          username.focus();
-          return false;
-      }
-
-      if (email.value == "") {
-          alert("Must have an email");
-          email.focus();
-          return false;
-      }
-
-      if (password.value == "") {
-          alert("Must have a Password");
-          password.focus();
-          return false;
-      }
-
-      if (cpassword.value == "") {
-          alert("Please confirm your password");
-          cpassword.focus();
-          return false;
-      }
-
-      if (cpassword.value != password.value) {
-          alert("Passwords do not match");
-          cpassword.focus();
-          return false;
-      }
-
-      if (message.value == "") {
-          alert("Please write a message");
-          message.focus();
-          return false;
-      }
-
-      return true;
-  }
-</script> -->
 </body>
-
 </html>
