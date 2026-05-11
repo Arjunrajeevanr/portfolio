@@ -1,5 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+  .cf-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    min-height: 480px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+  .cf-left {
+    background: #1a1a2e;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .cf-left::before {
+    content: '';
+    position: absolute;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(127,119,221,0.18);
+    top: -60px; left: -60px;
+  }
+  .cf-left::after {
+    content: '';
+    position: absolute;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(29,158,117,0.12);
+    bottom: 40px; right: -40px;
+  }
+  .cf-left-content { position: relative; z-index: 1; }
+  .cf-eyebrow {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: #7f77dd; margin: 0 0 1rem;
+  }
+  .cf-heading {
+    font-size: 26px; font-weight: 400;
+    color: #f0eeff; line-height: 1.3; margin: 0 0 1.25rem;
+  }
+  .cf-desc {
+    font-size: 13.5px; font-weight: 300;
+    color: rgba(240,238,255,0.55); line-height: 1.7; margin: 0;
+  }
+  .cf-contact-info { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 10px; }
+  .cf-info-row {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12.5px; color: rgba(240,238,255,0.5);
+  }
+  .cf-info-row i { font-size: 15px; color: #7f77dd; }
+  .cf-right {
+    padding: 2.5rem 2.25rem;
+    display: flex; flex-direction: column; gap: 1.25rem;
+    background: #0f0f1a;
+  }
+  .cf-field { display: flex; flex-direction: column; gap: 6px; }
+  .cf-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(240,238,255,0.45);
+  }
+  .cf-input {
+    font-size: 14px; font-weight: 300;
+    color: #f0eeff;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(127,119,221,0.2);
+    border-radius: 8px;
+    padding: 11px 14px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%; box-sizing: border-box;
+  }
+  .cf-input::placeholder { color: rgba(240,238,255,0.25); }
+  .cf-input:focus {
+    border-color: #7f77dd;
+    background: rgba(127,119,221,0.08);
+    box-shadow: 0 0 0 3px rgba(127,119,221,0.12);
+  }
+  .cf-textarea { resize: none; height: 130px; line-height: 1.6; }
+  .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .cf-btn {
+    margin-top: 0.25rem; padding: 13px 28px;
+    background: #3c3489; color: #f0eeff;
+    border: none; border-radius: 8px;
+    font-size: 13.5px; font-weight: 500; letter-spacing: 0.04em;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    transition: background 0.2s, transform 0.1s;
+    width: 100%;
+  }
+  .cf-btn:hover { background: #534ab7; }
+  .cf-btn:active { transform: scale(0.98); }
+  .cf-success {
+    display: none; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 12px; text-align: center; padding: 2rem; height: 100%;
+  }
+  .cf-success-icon { font-size: 48px; color: #1d9e75; }
+  .cf-success-title { font-size: 20px; color: #f0eeff; margin: 0; }
+  .cf-success-sub { font-size: 13.5px; color: rgba(240,238,255,0.5); margin: 0; }
+  @media (max-width: 768px) {
+    .cf-wrap { grid-template-columns: 1fr; }
+    .cf-row { grid-template-columns: 1fr; }
+  }
+</style>
 
 <head>
   <meta charset="utf-8">
@@ -339,18 +449,18 @@
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <!-- <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Send Mail</h3>
                   <p>arjunrajeevar@gamil.com</p>
                 </div>
               </div><!-- End Info Item -->
-
+<!-- 
               <iframe src=""></iframe>
-              </div> 
+              </div>  --> -->
 
-          <div class="col-lg-7">
+          <!-- <div class="col-lg-7">
             <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form-style" onsubmit="return validation()">
               <h1 class="mb-4">Contact me</h1>
               <input type="hidden" name="access_key" value="28019574-7234-44c8-99f9-e0bad6f68fd7">
@@ -387,10 +497,47 @@
             </form>
           </div>
 
-        </div> 
-            </div>
-          </div>
-          
+       
+           -->
+            <div class="cf-wrap">
+
+  <!-- Left info panel -->
+  <div class="cf-left">
+    <div class="cf-left-content">
+      <p class="cf-eyebrow">Get in touch</p>
+      <h2 class="cf-heading">Let's work<br>together.</h2>
+      <p class="cf-desc">Have a project in mind or just want to say hello? Fill in the form and I'll get back to you as soon as possible.</p>
+    </div>
+    <div class="cf-contact-info">
+      <div class="cf-info-row"><i class="bi bi-envelope"></i> arjunrajeevanr@gmail.com</div>
+      <div class="cf-info-row"><i class="bi bi-telephone"></i> 9895295136</div>
+      <div class="cf-info-row"><i class="bi bi-geo-alt"></i> Kollam, Kerala</div>
+      <div class="cf-info-row"><i class="bi bi-globe"></i> Available for freelance &amp; collab</div>
+    </div>
+  </div>
+
+  <!-- Right form panel -->
+     <div class="cf-right" id="cf-form-area">
+         <div class="cf-row">
+      <div class="cf-field">
+            <label class="cf-label" for="cf-name">Name</label>
+        <input class="cf-input" id="cf-name" type="text" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="cf-field">
+        <label class="cf-label" for="cf-email">Email</label>
+        <input class="cf-input" id="cf-email" type="email" placeholder="you@email.com" autocomplete="email">
+      </div>
+    </div>
+    <div class="cf-field">
+      <label class="cf-label" for="cf-msg">Message</label>
+      <textarea class="cf-input cf-textarea" id="cf-msg" placeholder="Tell me about your project or idea…"></textarea>
+    </div>
+    <button class="cf-btn" id="cf-send" onclick="handleContactSend()">
+      <i class="bi bi-send"></i> Connect with me
+    </button>
+  </div>
+
+</div>
           <div class=" col-lg-6 col-2 col-sm-4 col-md-2 col-xs-12 col-xl-2">
            <form action="https://api.web3forms.com/submit" method="POST"  class="forms" data-aos="fade-up" data-aos-delay="200" onsubmit="return validation()">
               <div class="row gy-4">
@@ -419,10 +566,14 @@
             </form>
           </div>
         <!-- End Contact Form -->
+            
 
         </div>
 
       </div>
+         </div> 
+            </div>
+          </div>
 
     </section><!-- /Contact Section -->
 
@@ -467,9 +618,9 @@
   <script src="assets/js/main.js"></script>
   <script> #preloader { display: none !important; } </script>
       <script>
-  // Age Automatic aayi update cheyyan
+  // Age automatic change 
   function calculateAge() {
-    const dob = new Date("2002-01-19"); // Ninte Birthday date
+    const dob = new Date("2002-01-19");
     const today = new Date();
     let age = today.getFullYear() - dob.getFullYear();
     const monthDiff = today.getMonth() - dob.getMonth();
@@ -478,43 +629,78 @@
     }
     document.getElementById("display-age").innerText = age;
   }
-  calculateAge(); // Page load aavumpol function run cheyyuka
+  calculateAge(); 
+        
+//form Validation
+  function handleContactSend() {
+    var name  = document.getElementById('cf-name').value.trim();
+    var email = document.getElementById('cf-email').value.trim();
+    var msg   = document.getElementById('cf-msg').value.trim();
+    var btn   = document.getElementById('cf-send');
+
+    if (!name || !email || !msg) {
+      btn.innerHTML = '<i class="bi bi-exclamation-circle"></i> Please fill all fields';
+      btn.style.background = '#a32d2d';
+      setTimeout(function() {
+        btn.innerHTML = '<i class="bi bi-send"></i> Connect with me';
+        btn.style.background = '';
+      }, 2500);
+      return;
+    }
+
+    var subject = encodeURIComponent('Portfolio Contact from ' + name);
+    var body    = encodeURIComponent(
+      'Name: '    + name  + '\n' +
+      'Email: '   + email + '\n\n' +
+      'Message:\n' + msg
+    );
+
+    window.location.href = 'mailto:zoromonkey77700@gmail.com?subject=' + subject + '&body=' + body;
+
+    var area = document.getElementById('cf-form-area');
+    area.innerHTML =
+      '<div class="cf-success" style="display:flex;">' +
+        '<i class="bi bi-check-circle cf-success-icon"></i>' +
+        '<p class="cf-success-title">Message sent!</p>' +
+        '<p class="cf-success-sub">Thanks for reaching out, ' + name + '.<br>I\'ll get back to you shortly.</p>' +
+      '</div>';
+  }
 
   // Form Validation
-  function validation() {
-    var username = document.getElementById("Username");
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
-    var cpassword = document.getElementById("cpassword");
-    var message = document.getElementById("message");
+  // function validation() {
+  //   var username = document.getElementById("Username");
+  //   var email = document.getElementById("email");
+  //   var password = document.getElementById("password");
+  //   var cpassword = document.getElementById("cpassword");
+  //   var message = document.getElementById("message");
 
-    if (username.value.trim() == "") {
-      alert("Please enter a Username");
-      username.focus();
-      return false;
-    }
-    if (email.value.trim() == "") {
-      alert("Email is required");
-      email.focus();
-      return false;
-    }
-    if (password.value.length < 6) {
-      alert("Password must be at least 6 characters");
-      password.focus();
-      return false;
-    }
-    if (cpassword.value != password.value) {
-      alert("Passwords do not match!");
-      cpassword.focus();
-      return false;
-    }
-    if (message.value.trim() == "") {
-      alert("Message cannot be empty");
-      message.focus();
-      return false;
-    }
-    return true;
-  }
+  //   if (username.value.trim() == "") {
+  //     alert("Please enter a Username");
+  //     username.focus();
+  //     return false;
+  //   }
+  //   if (email.value.trim() == "") {
+  //     alert("Email is required");
+  //     email.focus();
+  //     return false;
+  //   }
+  //   if (password.value.length < 6) {
+  //     alert("Password must be at least 6 characters");
+  //     password.focus();
+  //     return false;
+  //   }
+  //   if (cpassword.value != password.value) {
+  //     alert("Passwords do not match!");
+  //     cpassword.focus();
+  //     return false;
+  //   }
+  //   if (message.value.trim() == "") {
+  //     alert("Message cannot be empty");
+  //     message.focus();
+  //     return false;
+  //   }
+  //   return true;
+  // }
 </script>
 <!-- <script>
   function validation() {
